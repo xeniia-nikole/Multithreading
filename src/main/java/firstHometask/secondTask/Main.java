@@ -24,11 +24,22 @@ public class Main {
         listTasks.add(myCallable4);
 
         // Отправляем задачу на выполнение в пул потоков
- //       threadPool.invokeAll(listTasks);
+        System.out.println("\n\n==================== invokeAll ====================\n\n");
 
-        threadPool.invokeAny(listTasks);
+        // отправка на выполнение в пул потоков всех задач из списка:
+        List<Future<Integer>> futures = threadPool.invokeAll(listTasks);
+        
 
-        // Завершаем работу пула потоков
+        System.out.println("\n\n==================== invokeAny ====================\n\n");
+
+        // отправка на выполнение в пул потоков. Ожидание результата первой выполненной задачи из списка:
+        Integer futureAny = threadPool.invokeAny(listTasks);
+        System.out.println("Результат первой выполненной задачи: " + futureAny);
+
+        System.out.println("\n\n===================================================\n\n");
+
+        // закрытие пула потоков:
+        System.out.println("Завершение работы");
         threadPool.shutdown();
 
     }

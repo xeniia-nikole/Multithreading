@@ -28,7 +28,7 @@ public class MyCallable implements Callable<Integer> {
                     Thread.sleep(2500);
                 }
             } catch(InterruptedException e){
-                System.out.println("Но тут что-то пошло не так...");
+                System.out.println("Прерывание работы " + getName());
             } finally{
                 System.out.printf("Поток %s завершён, число исполнений - %d.\n", getName(), i);
             }
