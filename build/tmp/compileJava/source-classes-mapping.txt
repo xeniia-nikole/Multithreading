@@ -1,8 +1,0 @@
-firstHometask/firstTask/Main.java
- firstHometask.firstTask.Main
-firstHometask/firstTask/MyThread.java
- firstHometask.firstTask.MyThread
-firstHometask/secondTask/Main.java
- firstHometask.secondTask.Main
-firstHometask/secondTask/MyCallable.java
- firstHometask.secondTask.MyCallable
